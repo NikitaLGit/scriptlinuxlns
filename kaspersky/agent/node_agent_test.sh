@@ -15,12 +15,7 @@ passwd moaudit
 
 echo "Учетная запись moaudit создана и настроена!"
 
-# Конец первого скрипта. Начало второго
-n=5
-while true; do
-    sleep 1
-    echo "Следующий скрипт через $((n-SECONDS)) секунд"
-done
+## Конец первого скрипта. Начало второго ##
 
 # Определяем путь к файлу sudoers.txt
 sudoers_file="sudoers.txt"
@@ -50,12 +45,7 @@ cat /tmp/sudoers_final >> /etc/sudoers.test
 # Удаляем временные файлы
 rm /tmp/sudoers_temp /tmp/sudoers_final
 
-# Конец второго скрипта. Начало третьего
-n=5
-while true; do
-    sleep 1
-    echo "Следующий скрипт через $((n-SECONDS)) секунд"
-done
+## Конец второго скрипта. Начало третьего ##
 
 # Перемещение архива bin.tar в домашний каталог учетной записи
 cp bin.tar /home/moaudit/bin.tar && cd /home/moaudit
